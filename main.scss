@@ -1,0 +1,18 @@
+@import "styles/reset";
+@import "styles/variables";
+@import "styles/mixin";
+@import "styles/typography";
+@import "styles/icons";
+@import "styles/buttons";
+
+main {
+  width: 80%;
+  margin: auto;
+  .text-content {
+    margin-bottom: $space-xl;
+  }
+}
+
+section {
+  margin-bottom: $space-xl;
+}

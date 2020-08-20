@@ -1,0 +1,43 @@
+.icon {
+  display: inline-block;
+  color: $clr-primary;
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+}
+
+// Since the height and width of the icons are set to 1em,
+//changing the font size will automatically update the icon dimension
+//(1em is equal to the current font-size value)
+
+//using px for icon size can avoid dimension change at different viewport
+
+.icon--xs {
+  font-size: $icon-xs;
+}
+
+.icon--sm {
+  font-size: $icon-sm;
+}
+
+.icon--md {
+  font-size: $icon-md;
+}
+
+.icon--lg {
+  font-size: $icon-lg;
+}
+
+.icon--xl {
+  font-size: $icon-xl;
+}
+
+.icon-text-aligner {
+  display: flex;
+  align-items: center;
+  color: $clr-sec;
+  .icon {
+    margin-right: $space-sm;
+    color: inherit;
+  }
+}

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,600,800&display=swap");
+@import "./variables";
+
+$ff-primary: "Inter", sans-serif;
+$fw-bold: 800;
+$fw-md: 600;
+$fw-reg: 400;
+
+//---------- basic rules ----------
+$text-base-size: 1em; //16px
+$space-unit: 24px;
+$varying-unit: 1em;
+
+//========================
+//use em for $baseline, so when calculating space value (which also used for
+//heading margin-bottom) those spaces will be based on the heading font-size,
+//which produces different heights (larger height for larger fonts)
+//if using 1.5rem, all margin-bottom for all headings will be the same
+//========================
+
+//---------- type scale ----------
+$text-scale-ratio: 1.2;
+$text-md: $text-base-size; //16px
+$text-sm: $text-md / $text-scale-ratio; //13px
+$text-xs: $text-sm / $text-scale-ratio; //11px
+$text-lg: $text-md * $text-scale-ratio; //19.2px
+$text-xl: $text-lg * $text-scale-ratio; //23.04px
+$text-xxl: $text-xl * $text-scale-ratio; //27.6px
+$text-xxxl: $text-xxl * $text-scale-ratio; //33.2px
+$text-xxxxl: $text-xxxl * $text-scale-ratio; //40px
+
+//---------- varying space scale ----------
+$varying-space-xxs: $varying-unit * 0.25;
+$varying-space-xs: $varying-unit * 0.5;
+$varying-space-sm: $varying-unit * 0.75;
+$varying-space-md: $varying-unit * 1.25;
+$varying-space-lg: $varying-unit * 2;
+$varying-space-xl: $varying-unit * 3.25;
+$varying-space-xxl: $varying-unit * 5.25;
+$component-padding: $varying-space-md;
+
+//---------- consistent space ----------
+$space-md: $space-unit; //24px
+$space-sm: $space-unit / 2; //12px
+$space-lg: $space-unit * 2; //48px
+$space-xl: $space-unit * 3; //72px
+
+//---------- line-height ----------
+$body-line-height: 1.5em; //24px
+$heading-line-height: 1.2em; //19.2px
+
+body {
+  font-size: $text-md;
+  font-family: $ff-primary;
+}
+
+p {
+  line-height: $body-line-height;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: $fw-bold;
+  margin: 0;
+  padding: 0;
+  color: $clr-primary;
+  margin-bottom: $varying-space-sm;
+  //according to each font-size, margin-bottom is 1.5em / 2
+}
+
+.titles {
+  h1,
+  h2,
+  h3,
+  h4 {
+    border: 1px solid red;
+    color: black;
+  }
+}
+
+h1,
+.text-xxxxl {
+  font-size: $text-xxxxl;
+}
+
+h2,
+.text-xxxl {
+  font-size: $text-xxxl;
+}
+
+h3,
+.text-xxl {
+  font-size: $text-xxl;
+}
+
+h4,
+.text-xl {
+  font-size: $text-xl;
+}
+
+.text-sm {
+  font-size: $text-sm;
+}
+
+.text-xs {
+  font-size: $text-xs;
+}
+
+.spacer {
+  height: $space-xl;
+}
